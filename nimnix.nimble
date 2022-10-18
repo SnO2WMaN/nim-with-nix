@@ -12,5 +12,3 @@ bin           = @["nimnix"]
 # Dependencies
 
 requires "nim >= 1.6.8"
-
-requires "pkginfo"

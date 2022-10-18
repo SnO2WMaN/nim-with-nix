@@ -65,6 +65,58 @@
         "type": "github"
       }
     },
+    "flake-utils_3": {
+      "locked": {
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nimble": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1662039735,
+        "narHash": "sha256-4dw8FMhl+u14mMpdbkGiUv7X/q/p8FqqfHdr6WhNL7w=",
+        "owner": "nim-lang",
+        "repo": "nimble",
+        "rev": "1df4a0dad3d24ef7aa424ebce0fe7d476e1069ee",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nim-lang",
+        "repo": "nimble",
+        "rev": "1df4a0dad3d24ef7aa424ebce0fe7d476e1069ee",
+        "type": "github"
+      }
+    },
+    "nimnix": {
+      "inputs": {
+        "flake-utils": "flake-utils_3",
+        "nimble": "nimble",
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1666081599,
+        "narHash": "sha256-kUSs4T3LmCQlztaoKOFNxfNFk79l+kbX4qWrqux2rIo=",
+        "owner": "sno2wman",
+        "repo": "nim.nix",
+        "rev": "dd18847b6ae1e79b43ecf281f930626bfe35a129",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sno2wman",
+        "repo": "nim.nix",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1643381941,
@@ -82,6 +134,22 @@
       }
     },
     "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1666037717,
+        "narHash": "sha256-34njlgBoLvwvt1iQUf01jZd5e5aIn8liv0jYlaYRLd8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d512720a35aca0a1d4fde6575bd79081abc6a6e7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1665940183,
         "narHash": "sha256-cPe3F7CtnxU9YbJpc3Adl4d9kX+turqTv5FxM98i8vg=",
@@ -102,7 +170,8 @@
         "devshell": "devshell",
         "flake-compat": "flake-compat",
         "flake-utils": "flake-utils_2",
-        "nixpkgs": "nixpkgs_2"
+        "nimnix": "nimnix",
+        "nixpkgs": "nixpkgs_3"
       }
     }
   },
