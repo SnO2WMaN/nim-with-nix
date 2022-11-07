@@ -29,9 +29,7 @@
           inherit system;
           overlays = with inputs; [
             devshell.overlay
-            (final: prev: {
-              nimble = inputs.nimnix.packages.${system}.nimble;
-            })
+            nimnix.overlays.default
           ];
         };
       in {
@@ -61,32 +59,16 @@
           drv = self.packages.${system}.default;
         };
 
-        devShells.default = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            alejandra
-            treefmt
-            nim-unwrapped
-            nimble
-          ];
-        };
-        /*
         devShells.default = pkgs.devshell.mkShell {
-          packages = with pkgs; [
-            alejandra
-            treefmt
-            nim-unwrapped
-            nimble-unwrapped
-          ];
-          commands = [
-            {
-              package = "treefmt";
-              category = "formatter";
-            }
-          ];
-          env = [
-          ];
+          packages = (
+            with pkgs; [
+              alejandra
+              treefmt
+              nim-unwrapped
+              nimble
+            ]
+          );
         };
-        */
       }
     );
 }
